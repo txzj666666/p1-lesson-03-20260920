@@ -52,6 +52,9 @@ h1, h2, h3, strong { font-weight: 600; }
 a { color: var(--green-500); text-decoration: none; transition: color 160ms ease; }
 a:hover { color: var(--gold); }
 img { max-width: 100%; height: auto; }
+/* 锚点跳转：滚动更顺滑，并让栏目标题不被顶部导航条挡住 */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 84px; }
 .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 section { margin: 0; }
 .skip-link { display: none; }
@@ -230,7 +233,7 @@ h1 span {
   z-index: 1;
   margin-top: 22px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
 }
 .profile-details > div {
@@ -367,32 +370,164 @@ h1 span {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
-.skills-list li {
+.skills-list > li {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 20px 22px;
+  padding: 22px 24px;
   box-shadow: var(--shadow-sm);
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
-.skills-list li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.skills-list li::before {
+.skills-list > li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.skills-list > li::before {
   content: "◆";
   display: block;
   color: var(--gold);
   font-size: 13px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .skills-list strong {
+  display: block;
+  color: var(--green-700);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.skills-list > li > p {
+  margin: 12px 0 0;
+  color: var(--text-soft);
+}
+
+/* 技能标签（彩色小胶囊） */
+.skill-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-tags li {
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green-100), #d9e5dd);
+  border: 1px solid rgba(37, 74, 64, 0.14);
+  color: var(--green-700);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+/* ---------- 兴趣爱好 ---------- */
+.hobby-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.hobby-list li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.hobby-list li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.hobby-list strong {
   display: block;
   color: var(--green-700);
   font-size: 17.5px;
   margin-bottom: 4px;
 }
-.skills-list li { color: var(--text-soft); }
+.hobby-list p { margin: 0; color: var(--text-soft); }
+
+/* ---------- 家乡 ---------- */
+.hometown-intro {
+  margin: 0 0 22px;
+  padding: 18px 24px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+}
+.hometown-gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.hometown-gallery li {
+  display: flex;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.hometown-gallery li:hover,
+.hometown-gallery li:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.hometown-gallery figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.hometown-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: var(--green-100);
+}
+.hometown-gallery figcaption {
+  padding: 14px 20px 18px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-soft);
+}
+.hometown-gallery figcaption strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 17.5px;
+  color: var(--green-700);
+}
+/* 家乡入口：一句话 + 「广东汕头」链接，完整介绍在 hometown.html */
+.hometown-teaser {
+  margin: 0;
+  padding: 22px 26px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  box-shadow: var(--shadow-sm);
+  font-size: 18px;
+  color: var(--text);
+}
+.hometown-teaser a {
+  color: var(--green-700);
+  font-weight: 600;
+  border-bottom: 1px dashed currentColor;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.hometown-teaser a:hover {
+  color: var(--gold);
+  border-bottom-style: solid;
+}
 
 /* ---------- 作品门户（在课程网格基础上微调观感） ---------- */
 .portfolio-list { padding: 0; }
@@ -455,12 +590,17 @@ footer a:hover { color: var(--gold-soft); }
   .hero-top { flex-direction: column-reverse; align-items: flex-start; }
   .hero-visual { align-self: center; }
   .profile-details { grid-template-columns: 1fr; }
+  .hobby-list { grid-template-columns: 1fr; }
+  .hometown-gallery { grid-template-columns: 1fr; }
   .hero-copy h1 { font-size: 36px; }
   h1 span { display: block; margin: 6px 0 0; font-size: 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .profile-details > div,
   .research-item,
-  .skills-list li,
+  .skills-list > li,
+  .hobby-list li,
+  .hometown-gallery li,
   .work-card { transition: none; }
 }
