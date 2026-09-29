@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<!-- 【答辩讲解】家乡介绍子页面：从首页"我的家乡：广东汕头"点进来；结构和首页一样（section → container → 标题 + 内容），图片墙是 4 个 li。 -->
+<!--
+  【答辩讲解】家乡介绍子页面 —— 从首页"我的家乡：广东汕头"点进来，构成多页网站。
+  结构和首页完全一样：header 导航（可跳回主页各栏目）→ main（一个 section：简介 + 图片墙）→ footer。
+  图片墙 hometown-gallery：桌面端 grid 排 2×2，每张卡是 figure（img 图片 + figcaption 图注）；
+  手机端媒体查询自动变单列。
+  想加照片：① 图片放进 assets/ ② 复制一个 <li>...</li> 改 src、alt 和图注文字。
+-->
 <html lang="zh-CN">
  <head>
   <meta charset="utf-8"/>
