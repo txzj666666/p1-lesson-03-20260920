@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<!--
+  ════════════════════════════════════════════════════
+  我的个人主页 · 答辩讲解备注（写给人看的，浏览器不会显示）
+
+  页面就三大块：head（设置）→ main（内容）→ footer（页脚）。
+  所有栏目都是同一套路：section 大盒子 → container 对齐 → 标题 + 内容，
+  长相全部交给 CSS 管，HTML 只负责"这里有什么"。
+
+  日常维护三步：
+  ① 改 HTML / CSS（用编辑器改完保存）
+  ② git add . → git commit -m "改了什么" → git push
+  ③ GitHub Pages 约 1 分钟自动更新，浏览器 Ctrl+F5 强刷查看
+  ════════════════════════════════════════════════════
+-->
 <html lang="zh-CN" data-page-node-id="RdFwn2CqrNAHTYb042BrRx">
  <head data-page-node-id="tDataHLfqhgkSAhEFeVYsy">
   <meta charset="utf-8" data-page-node-id="DWaY8QMN94c5ZdUT5ZqRxx"/>
@@ -9,11 +23,13 @@
    我的个人主页
   </title>
   <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" data-page-node-id="gYHDSNxEJfnxHmOUTlwgHj"/>
+  <!-- 【答辩讲解】head 是页面的"设置区"：编码、手机适配、标题、小图标。 -->
   <!-- CSS 负责颜色、字体、布局；defer 让 JavaScript 在 HTML 解析完成后执行。 -->
   <link href="styles.css" rel="stylesheet" data-page-node-id="fYwha7yxGxqc2wd1sJ7k7z"/>
   <!-- 第 3 课只新增这一张样式表，不覆盖前两课的 styles.css。 -->
   <link href="lesson-03-task.css" rel="stylesheet" data-page-node-id="IHcRPvM8CVLqlryGGvOsGG"/>
   <!-- 视觉增强：整体排版美化，放在最后加载以覆盖前面的基础样式。 -->
+  <!-- 三张 CSS 按顺序叠加，越靠后优先级越高；想改颜色、间距，基本只动最后这张。 -->
   <link href="resume-enhance.css" rel="stylesheet" data-page-node-id="H6Sqk0WwPXdtn5JDpVSRvG"/>
  
  </head>
@@ -21,6 +37,7 @@
   <a class="skip-link" href="#main" data-page-node-id="jBJDL9UtLt0yHekY6fw2Ia">
    跳到正文
   </a>
+  <!-- 【答辩讲解】顶部导航：吸顶常驻；每个链接 href="#栏目id" 对应下面一个栏目，点了页面就滚过去，不用 JS。 -->
   <header class="site-header" data-page-node-id="F12VWruylSGH2xE3K21Rrd">
    <div class="container header-inner" data-page-node-id="JDMeOBZDKKHS6HReSUnw4I">
     <a class="brand" href="#about" data-page-node-id="U2jov1Ct4evoeMMroEdeC0">
@@ -59,7 +76,7 @@
    </div>
   </header>
   <main id="main" data-page-node-id="6OEuSfXnGtI8F7r6x3v6mE">
-   <!-- HTML 练习：修改姓名、研究方向、照片路径和联系方式。 -->
+   <!-- 【答辩讲解】"关于我"：左边是名字/身份/学校，右边是头像；想改资料，直接改下面几行文字就行。 -->
    <section class="hero" id="about" data-page-node-id="dw8WYu0fEURGBC37ZFHnAT">
     <div class="container" data-page-node-id="UWFBGw00mrDBoW5oN5CCWV">
      <div class="hero-top" data-page-node-id="wj5HrVUOf4ujmLJhk0qOqS">
@@ -91,6 +108,7 @@
        HTML5、CSS3、JavaScript，正在学习 Git、数据库与网站部署。
       </p>
      </div>
+     <!-- 【答辩讲解】个人信息卡片：一小格是一张卡；想加一项，复制一个 <div>...</div> 改文字即可（桌面端一行排 5 格）。 -->
      <div class="profile-details" data-page-node-id="kuGAneA58GPGK6dcrixJ0g">
       <div data-page-node-id="WsGrraFeifSm9pPfvjkvKO">
        <span data-page-node-id="Yrre4gpvXawCA2Vb0pXmox">
@@ -144,7 +162,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="50C6DDi6ALARYpaUYZ4xZ4">
-      <!-- TASK-HTML：复制 experience-item 可增加一条自己的经历。 -->
+      <!-- 【答辩讲解 + 怎么改】一条经历 = 一个 experience-item（左边名称、右边时间胶囊、下面一句说明）；复制整块就能加第二条。 -->
       <div class="experience-item" data-page-node-id="XFyuvQRRaBb4OyioOj8xbQ">
        <p class="experience-heading" data-page-node-id="G7iNwkHjVgYZ0NfGGH9lCf">
         <strong data-page-node-id="wJzXOvHEfsorHwcqx0jxCl">
@@ -169,6 +187,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="CHEejHDuxQRaYdtC5Hberr">
+      <!-- 【答辩讲解 + 怎么改】一个项目 = 一张卡；加新项目就复制整个 article，改时间标签、标题和介绍。 -->
       <article class="research-item" data-page-node-id="DOfEAZB5CzgCBDhEtqKDeA">
        <h3 data-page-node-id="0reOpJdpdB35LVM9xM8HnN">
         <time data-page-node-id="pLvqsbwNurQtwHfWWaHkX8">
@@ -191,7 +210,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="dfCiS8Ud3p9mK7eGyyHfGw">
-      <!-- TASK-HTML：复制一个 li 就能再加一项技能；标签写在 skill-tags 里。 -->
+      <!-- 【答辩讲解 + 怎么改】技能卡 = 标题(strong) + 标签(skill-tags) + 一句说明(p)；复制一个 <li> 就能再加一项技能。 -->
       <ul class="skills-list" data-page-node-id="euvbkP67mT1mH7c452sqtl">
        <li data-page-node-id="IWDiiWYzBaLsFGLJVqGo7a">
         <strong data-page-node-id="L4v489VPe8nLe5dQO3WDra">
@@ -278,7 +297,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="Yq5bNm2LpRt8Wd3KcVs9Xz">
-      <!-- TASK-HTML：复制 hobby-list 里的 li 可以增加一项爱好。 -->
+      <!-- 【答辩讲解 + 怎么改】爱好卡：一个 <li> 一项爱好；复制改字就能加。 -->
       <ul class="hobby-list" data-page-node-id="Lp7dRt3QmKc9Vb5NxWs2Yh">
        <li data-page-node-id="Vb4nKc8RtLp2Qm6YdXs3Wz">
         <strong data-page-node-id="Qm9pLs5RtKc3Vb7NdXw2Yh">
@@ -300,7 +319,7 @@
      </div>
     </div>
    </section>
-   <!-- TASK-HTML：家乡的完整介绍（文字 + 图片）已移到 hometown.html，这里只留一句入口。 -->
+   <!-- 【答辩讲解】家乡的介绍 + 照片单独放在 hometown.html 页面（多页网站），首页这里只放一个入口链接"广东汕头"。 -->
    <section class="section" id="hometown" data-page-node-id="Rt4bLp7QmKc2Vd9NxWs6Yh">
     <div class="container" data-page-node-id="Vb8nKc3RtLp5Qm2YdXs9Wz">
      <header class="section-heading" data-page-node-id="Qm2pLs8RtKc4Vb6NdXw3Yh">
@@ -325,6 +344,8 @@
        以下为教学示例，完成后可替换为自己的作品。
       </p>
      </header>
+     <!-- 【答辩讲解 + 怎么改】作品卡 = 外链 a（新窗口打开）+ 截图 + 标题 + 一句话；加新作品就复制一个 <li>，图片先放进 assets/。
+          第 3 课的响应式：电脑上两列（grid），手机窄屏自动变一列（@media 媒体查询）。 -->
      <ol class="portfolio-list" data-page-node-id="VNGZMocAjG1OgldXPNRpKi">
       <li class="work-card work-blog" data-page-node-id="8YeHaHm09RX4QOWYwnHkcW">
        <a href="https://ffd-p2-blog.netlify.app/" rel="noopener noreferrer" target="_blank" data-page-node-id="aFetxHO3ItvCyYGTDDryvM">
@@ -389,6 +410,7 @@
      </ol>
     </div>
    </section>
+   <!-- 【答辩讲解】下面两个板块（目标、学习记录）就是普通有序列表 ol，改 <li> 里的文字即可。 -->
    <section class="section" id="teaching" data-page-node-id="clyUDrBlLhnjl1GEFfrN2o">
     <div class="container" data-page-node-id="Xo6BdrLiwSxdSRltN4OZ8A">
      <header class="section-heading" data-page-node-id="7odNCn7TGJQs98dCcU6hlT">
@@ -441,6 +463,7 @@
     </div>
    </section>
   </main>
+  <!-- 【答辩讲解】页脚：深色底 + 两个链接，同样是锚点跳转。 -->
   <footer data-page-node-id="dTaXTvyPWD3hut5GEpJeub">
    <div class="container footer-inner" data-page-node-id="q4mjRm3c7d0v86yWSOokNO">
     <a href="#about" data-page-node-id="MmyNuVuOrHzyljKZD0HIZ4">
