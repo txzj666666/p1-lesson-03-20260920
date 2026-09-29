@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   ════════════════════════════════════════════════════
-  我的个人主页 · 答辩讲解备注（这些注释是写给人看的，浏览器不会显示）
+  我的个人主页 · 说明备注（这些注释是写给人看的，浏览器不会显示）
 
   一、这是一个什么网站
   一个不依赖后端、不依赖框架的纯静态个人网站：
@@ -45,12 +45,12 @@
    我的个人主页
   </title>
   <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" data-page-node-id="gYHDSNxEJfnxHmOUTlwgHj"/>
-  <!-- 【答辩讲解】head 是页面的"设置区"，访客在页面上看不到。
+  <!--head 是页面的"设置区"，访客在页面上看不到。
        charset 告诉浏览器用 UTF-8 解码，中文才不会乱码；
        viewport 让手机按自己的屏幕宽度显示，是响应式的第一步；
        title 显示在浏览器标签页上；favicon 是标签页的小图标，来自 assets/。
        description 是给搜索引擎看的简介（本项目设了 noindex，所以不参与搜索收录）。 -->
-  <!-- 【答辩讲解】下面按顺序引入三张 CSS，越靠后优先级越高，后面的规则可以覆盖前面的。
+  <!--下面按顺序引入三张 CSS，越靠后优先级越高，后面的规则可以覆盖前面的。
        这叫"分层"：打底样式 → 课程任务 → 个性化美化，各管各的，改起来互不干扰。 -->
   <!-- CSS 负责颜色、字体、布局；defer 让 JavaScript 在 HTML 解析完成后执行。 -->
   <link href="styles.css" rel="stylesheet" data-page-node-id="fYwha7yxGxqc2wd1sJ7k7z"/>
@@ -65,7 +65,7 @@
   <a class="skip-link" href="#main" data-page-node-id="jBJDL9UtLt0yHekY6fw2Ia">
    跳到正文
   </a>
-  <!-- 【答辩讲解】顶部导航条：CSS 里用 position: sticky 让它一直吸在页面顶端，往下滚动也看得见。
+  <!--顶部导航条：CSS 里用 position: sticky 让它一直吸在页面顶端，往下滚动也看得见。
        每个链接 href="#栏目id" 对应正文里某个栏目的 id，点击后浏览器自动滚过去——
        这叫锚点跳转，纯 HTML 就能实现，不需要写 JavaScript（CSS 里加了 scroll-behavior: smooth，所以是平滑滚动）。
        想加导航项：复制一行 <a>，把 href 改成新栏目的 id、文字改成栏目名即可。 -->
@@ -107,7 +107,7 @@
    </div>
   </header>
   <main id="main" data-page-node-id="6OEuSfXnGtI8F7r6x3v6mE">
-   <!-- 【答辩讲解】"关于我"板块（第一个栏目，id="about"）。
+   <!--"关于我"板块（第一个栏目，id="about"）。
         hero-top 左右两栏：左边 hero-copy 是名字（h1 大标题）、身份、学校；
         右边 hero-visual 是头像，图片来自 assets/avatar.svg，想换就把自己的图片放进 assets/ 再改 src。
         research-direction 是"学习方向"卡片；最底下 profile-details 是个人信息小卡片。
@@ -143,7 +143,7 @@
        HTML5、CSS3、JavaScript，正在学习 Git、数据库与网站部署。
       </p>
      </div>
-     <!-- 【答辩讲解 + 怎么改】个人信息卡片：profile-details 是网格容器（CSS 里 display: grid），
+     <!-- 【怎么改】个人信息卡片：profile-details 是网格容器（CSS 里 display: grid），
           里面每个 <div> 是一小张卡——上面 <span> 是灰色小标签，下面 <p> 是绿色内容。
           想加一项：复制一个 <div>...</div> 改文字即可，桌面端自动排成一行 5 格，窄屏自动变 2 列 / 1 列。 -->
      <div class="profile-details" data-page-node-id="kuGAneA58GPGK6dcrixJ0g">
@@ -199,7 +199,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="50C6DDi6ALARYpaUYZ4xZ4">
-      <!-- 【答辩讲解 + 怎么改】一条经历 = 一个 experience-item：
+      <!-- 【怎么改】一条经历 = 一个 experience-item：
            strong 是经历名称，time 是右侧的时间胶囊，experience-detail 是一句说明。
            想加第二条：把这一整块 <div class="experience-item">...</div> 复制一份，改文字即可。 -->
       <div class="experience-item" data-page-node-id="XFyuvQRRaBb4OyioOj8xbQ">
@@ -226,7 +226,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="CHEejHDuxQRaYdtC5Hberr">
-      <!-- 【答辩讲解 + 怎么改】项目经历：一个 <article class="research-item"> 是一张卡。
+      <!-- 【怎么改】项目经历：一个 <article class="research-item"> 是一张卡。
            h3 里开头的时间 <time> 渲染成金色小胶囊，后面是项目名；<p> 是项目介绍。
            加新项目：复制整个 article 块，改时间、标题、介绍三处文字。 -->
       <article class="research-item" data-page-node-id="DOfEAZB5CzgCBDhEtqKDeA">
@@ -251,7 +251,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="dfCiS8Ud3p9mK7eGyyHfGw">
-      <!-- 【答辩讲解 + 怎么改】技能卡共三层：<strong> 是技能名，<ul class="skill-tags"> 里每个 <li> 是一枚标签胶囊，<p> 是一句说明。
+      <!-- 【怎么改】技能卡共三层：<strong> 是技能名，<ul class="skill-tags"> 里每个 <li> 是一枚标签胶囊，<p> 是一句说明。
            加新技能：复制一个 <li>...</li>（从 <li> 到配对的 </li>），改里面的文字；
            加或删标签：在 skill-tags 里增减 <li> 就行。
            桌面端 2 列（grid），窄屏自动变 1 列。 -->
@@ -341,7 +341,7 @@
       </h2>
      </header>
      <div class="section-content" data-page-node-id="Yq5bNm2LpRt8Wd3KcVs9Xz">
-      <!-- 【答辩讲解 + 怎么改】爱好卡：hobby-list 里一个 <li> 一项爱好（加粗的名字 + 一句话说明）。
+      <!-- 【怎么改】爱好卡：hobby-list 里一个 <li> 一项爱好（加粗的名字 + 一句话说明）。
            加新爱好：复制一个 <li> 改文字；窄屏自动变单列。 -->
       <ul class="hobby-list" data-page-node-id="Lp7dRt3QmKc9Vb5NxWs2Yh">
        <li data-page-node-id="Vb4nKc8RtLp2Qm6YdXs3Wz">
@@ -364,7 +364,7 @@
      </div>
     </div>
    </section>
-   <!-- 【答辩讲解】家乡介绍做成了单独的页面 hometown.html——这是"多页网站"：点链接从一个页面跳到另一个页面。
+   <!--家乡介绍做成了单独的页面 hometown.html——这是"多页网站"：点链接从一个页面跳到另一个页面。
         首页这里只保留一个入口链接"广东汕头"（a 标签，href 指向 hometown.html）；
         那个页面里才是完整内容：一段介绍 + 4 张照片的图片墙，结构套路和首页完全相同。 -->
    <section class="section" id="hometown" data-page-node-id="Rt4bLp7QmKc2Vd9NxWs6Yh">
@@ -391,7 +391,7 @@
        以下为教学示例，完成后可替换为自己的作品。
       </p>
      </header>
-     <!-- 【答辩讲解 + 怎么改】作品门户：ol.portfolio-list 是网格容器，
+     <!-- 【怎么改】作品门户：ol.portfolio-list 是网格容器，
           桌面端 display: grid + repeat(2, minmax(0, 1fr)) 排成两列等宽；
           手机端靠 @media (max-width: 640px) 媒体查询改成 1fr 单列——这就是第 3 课的响应式核心。
           鼠标移上去卡片上浮几像素，是 transition + translateY 做的过渡动画。
@@ -461,7 +461,7 @@
      </ol>
     </div>
    </section>
-   <!-- 【答辩讲解 + 怎么改】下面两个板块（本学期目标、学习记录）是最简单的有序列表 <ol>：
+   <!-- 【怎么改】下面两个板块（本学期目标、学习记录）是最简单的有序列表 <ol>：
         浏览器自动给 <li> 编号，改文字就行，加一条目标就多写一行 <li>。 -->
    <section class="section" id="teaching" data-page-node-id="clyUDrBlLhnjl1GEFfrN2o">
     <div class="container" data-page-node-id="Xo6BdrLiwSxdSRltN4OZ8A">
@@ -515,7 +515,7 @@
     </div>
    </section>
   </main>
-  <!-- 【答辩讲解】页脚：深绿色底、浅色文字，放两个锚点链接（回到顶部 / 去作品区），跳转原理和顶部导航相同。 -->
+  <!--页脚：深绿色底、浅色文字，放两个锚点链接（回到顶部 / 去作品区），跳转原理和顶部导航相同。 -->
   <footer data-page-node-id="dTaXTvyPWD3hut5GEpJeub">
    <div class="container footer-inner" data-page-node-id="q4mjRm3c7d0v86yWSOokNO">
     <a href="#about" data-page-node-id="MmyNuVuOrHzyljKZD0HIZ4">
@@ -529,33 +529,4 @@
  </body>
 </html>
 
-<!--
-  ════════════════════════════════════════════════════════════
-  运维备忘：改动怎么发布到线上（GitHub Pages 自动部署）
-
-  1. 每次改完，在项目文件夹的终端里按顺序执行：
-     git status   —— 先看改了哪些文件（红色=还没加入提交，绿色=已加入）
-     git diff     —— 再看具体改了哪几行，确认没改错
-     git add .    —— 把本次全部改动放进"下一次提交"
-     git commit -m "一句话说明这次改了什么"  —— 生成一个本地版本，随时可以回退
-     git push     —— 推送到 GitHub，网站随后自动更新
-
-  2. 这个网站部署在两个仓库，内容要保持一致，改完记得都推：
-     ① origin：p1-lesson-03-20260920（课程仓库，交作业用）
-     ② gerenjianli01（个人站）—— 推法：克隆下来 → 覆盖对应文件 → commit → push
-
-  3. 推送后 GitHub Pages 自动重新部署，大约 1 分钟生效。
-     页面没变化依次检查：文件保存了吗 → push 成功了吗 → 等 1 分钟了吗
-     → 浏览器 Ctrl+F5 强制刷新了吗（普通刷新可能拿到缓存的旧文件）。
-
-  4. 常见故障：
-     · 图片裂开：图片没放进 assets/，或代码里的文件名和实际大小写不一致。
-     · 打开是 404：检查仓库 Settings → Pages，Branch 应为 main、目录 /(root)。
-     · 推送被拒：先 git pull 把远程更新拉下来合并，再 push。
-
-  5. 改坏了怎么回退：
-     git log --oneline      —— 列出历史版本（每一行前面的短编号就是版本号）
-     git checkout 编号 -- 文件名   —— 把某个文件恢复成那个版本的样子
-  ════════════════════════════════════════════════════════════
--->
 <!-- 本课任务详见课堂任务.md。 -->
